@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+    <!-- <h1>Clock made with html, css and javascript</h1> -->
+    <div id="clock">
+        <div id="clockface">
+            <div id="hrh" class="hand"></div>
+            <div id="minh" class="hand"></div>
+            <div id="sech" class="hand"></div>
+        </div>
+    </div>
+    <script>
+        function setDate(){
+            const now = new Date();
+            
+            const seconds= now.getSeconds();
+            const secondsDegrees= ((seconds/60)*360)+90;
+            document.getElementById("sech").style.transform=`rotate(${secondsDegrees}deg)`;
+            console.log(seconds);
+
+            const mins=now.getMinutes();
+            const minDegrees=((mins/60)*360)+90;
+            document.getElementById("minh").style.transform=`rotate(${minDegrees}deg)`;
+
+            const hours=now.getHours();
+            const hrDegrees=((hours/12)*360)+90;
+            document.getElementById("hrh").style.transform=`rotate(${hrDegrees}deg)`;
+        }
+        setInterval(setDate,1000);
+    </script>
+</body>
+</html>

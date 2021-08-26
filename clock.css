@@ -1,0 +1,44 @@
+html{
+    background-color: rgb(35, 35, 65);
+    color: violet;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+}
+#clock{
+    height: 25em;
+    width: 25em;
+    border: 15px solid rgb(199, 234, 243);
+    border-radius: 100%;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    padding: 20px;
+}
+.hand{
+    width: 45%;
+    height: 2px;
+    background: blue;
+    position: absolute;
+    top: 50%;
+    border-radius: 5px;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+#minh{
+    background: cyan;
+    height: 6px;
+    width: 175px;
+    margin: 0px 25px;
+}
+#hrh{
+    background: white;
+    height: 12px;
+    width: 120px;
+    margin: 0px 75px;
+}
